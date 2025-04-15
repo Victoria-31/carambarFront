@@ -11,6 +11,8 @@
   <body>
     <main>
         <header>
+          <img src="./images/carambar-logo.png" alt="logo carambar avec bonbons" />
+
             <nav>
               <a href="index.html">Accueil</a>
               <a href="all-jokes.html">Toutes les blagues</a>
@@ -20,12 +22,12 @@
         </header>
         <section>
             <div class="form-container">
-                <form id="joke-form">
+                <form class="joke-form">
                     <div class="form-group">
                         <label for="joke-question">Question</label>
                         <input 
                           type="text" 
-                          id="joke-question" 
+                          class="joke-question" 
                           name="question" 
                           placeholder="Exemple: Pourquoi les plongeurs plongent-ils en arrière ?" 
                           required
@@ -34,14 +36,14 @@
                     <div class="form-group">
                         <label for="joke-answer">Réponse</label>
                         <textarea 
-                          id="joke-answer" 
+                          class="joke-answer" 
                           name="answer" 
                           placeholder="Exemple: Parce que sinon, ils tombent dans le bateau !" 
                           required
                         ></textarea>
                     </div>
                     <button type="submit">Ajouter la blague</button>
-                    <p id="status-message"></p>
+                    <p class="status-message"></p>
                 </form>
             </div>
         </section>

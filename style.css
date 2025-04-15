@@ -37,36 +37,6 @@ header {
 	}
 }
 
-.diagonal-divider {
-	position: relative;
-	width: 100%;
-	height: 10vh;
-	overflow: hidden;
-}
-
-.diagonal-divider::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: var(--background-color);
-	z-index: 1;
-}
-
-.diagonal-divider::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 140%;
-	height: 100%;
-	background-color: var(--primary-color);
-	transform: rotate(-5deg) translateY(70%);
-	z-index: 2;
-}
-
 nav {
 	display: flex;
 	justify-content: center;
@@ -98,6 +68,7 @@ h2 {
 	font-size: 2rem;
 	margin-bottom: 1rem;
 	color: var(--primary-color);
+	text-align: center;
 }
 
 section {
@@ -112,13 +83,14 @@ section {
 	border-radius: 50px;
 	padding: 0.6rem 1.5rem;
 	font-size: 1rem;
-	font-family: "Jura", sans-serif;
 	cursor: pointer;
 	box-shadow: 0 4px 6px var(--shadow-color);
 	transition: background-color 0.3s ease, transform 0.2s ease;
 	margin-bottom: 2rem;
 }
-
+.joke-random {
+	margin: 3rem 0;
+}
 .reload-button:hover {
 	transform: translateY(-2px);
 }
@@ -133,7 +105,8 @@ section {
 	padding: 2rem;
 	color: var(--primary-color);
 }
-.get-joke {
+.get-joke,
+button form {
 	background-color: var(--primary-color);
 	color: white;
 	border: none;
@@ -158,9 +131,20 @@ section {
 .joke {
 	background-color: var(--card-background);
 	padding: 1.5rem;
-	margin-bottom: 2rem;
+	margin: 2rem;
+	position: relative;
 	transition: transform 0.3s ease;
-	border: 4px dashed var(--primary-color);
+}
+
+.joke:before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	right: -10px;
+	bottom: -10px;
+	border: 2px dashed var(--card-background);
+	box-sizing: border-box;
 }
 
 .joke:hover {
@@ -193,12 +177,6 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-/* Formulaire */
-.form-container {
-	max-width: 600px;
-	margin: 0 auto;
 }
 
 form {
@@ -240,16 +218,10 @@ button[type="submit"] {
 	border-radius: 50px;
 	padding: 0.8rem 2rem;
 	font-size: 1.2rem;
-	font-family: "Jura", sans-serif;
 	cursor: pointer;
 	box-shadow: 0 4px 6px var(--shadow-color);
 	transition: background-color 0.3s ease, transform 0.2s ease;
 	width: 100%;
-}
-
-button[type="submit"]:hover {
-	background-color: var(--secondary-color);
-	transform: translateY(-2px);
 }
 
 .status-message {
@@ -273,8 +245,15 @@ button[type="submit"]:hover {
 	main {
 		max-width: 60vw;
 	}
+	.form-container {
+		max-width: 60vw;
+	}
 	.all-jokes {
 		flex-direction: row;
 		flex-wrap: wrap;
+		& .joke {
+			flex: 1 1 calc(40% - 2rem);
+			margin: 1rem;
+		}
 	}
 }
