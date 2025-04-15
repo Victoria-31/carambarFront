@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter une blague - Carambar</title>
+    <link rel="stylesheet" href="style.css" />
+  
+  </head>
+
+  <body>
+    <main>
+        <header>
+            <nav>
+              <a href="index.html">Accueil</a>
+              <a href="all-jokes.html">Toutes les blagues</a>
+              <a href="add-joke.html">Ajouter une blague</a>
+            </nav>
+            <h1>Ajouter une blague</h1>
+        </header>
+        <section>
+            <div class="form-container">
+                <form id="joke-form">
+                    <div class="form-group">
+                        <label for="joke-question">Question</label>
+                        <input 
+                          type="text" 
+                          id="joke-question" 
+                          name="question" 
+                          placeholder="Exemple: Pourquoi les plongeurs plongent-ils en arrière ?" 
+                          required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="joke-answer">Réponse</label>
+                        <textarea 
+                          id="joke-answer" 
+                          name="answer" 
+                          placeholder="Exemple: Parce que sinon, ils tombent dans le bateau !" 
+                          required
+                        ></textarea>
+                    </div>
+                    <button type="submit">Ajouter la blague</button>
+                    <p id="status-message"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+      <p>© 2025. Tous droits réservés.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

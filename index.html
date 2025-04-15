@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carambar</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+    
   </head>
 
   <body>
     <main>
         <header>
+          <img src="./images/carambar-logo.png" alt="logo carambar avec bonbons" />
             <nav>
-            <a href="%"> Blagues</a>
-            <a href="%"> Ajouter une blague</a>
-          </nav>
-          <h1>Blague Express 🤡</h1>
-          <button id="get-joke">Faire une blague</button>
-          <div id="joke" class="joke" aria-live="polite"></div>
+              <a href="index.html">Accueil</a>
+              <a href="all-jokes.html">Toutes les blagues</a>
+              <a href="add-joke.html">Ajouter une blague</a>
+            </nav>
+            <h1> Blague aléatoire</h1>
+            <button class="get-joke">Faire une blague</button>
+            <div  class="joke-random" aria-live="polite">           
+            </div>
         </header>
+        <div class="diagonal-divider"></div>
+
         <section>
             <h2>Blague du jour</h2>
-            <div class="blague">
+            <div class="joke">
                 <p class="question">Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ?</p>
                 <p class="reponse">Parce que sinon ils tombent dans le bateau !</p>
             </div>
@@ -37,7 +37,6 @@
       <p>© 2025. Tous droits réservés.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
     <script src="script.js"></script>
   </body>
 </html>
